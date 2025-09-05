@@ -6,6 +6,7 @@ from src.routes.analyze_combined import analyze_combined_bp
 import os
 
 def create_app():
+    global app
     app = Flask(__name__)
     
     # Activer CORS ici
