@@ -1,5 +1,6 @@
 --only-binary=:all:
 Flask==3.0.3
+flask-cors
 Werkzeug==3.0.3
 python-dotenv==1.0.1
 pydantic>=2.8.2
