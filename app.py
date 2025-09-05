@@ -5,6 +5,7 @@ from src.routes.analyze_images import analyze_images_bp
 from src.routes.analyze_combined import analyze_combined_bp  
 import os
 
+# Définir la fonction create_app() en premier
 def create_app():
     global app
     app = Flask(__name__)
@@ -19,7 +20,9 @@ def create_app():
     app.register_blueprint(analyze_combined_bp, url_prefix="/combined")
     return app
 
+# Initialiser l'instance app globalement après la définition
+app = create_app()
+
 if __name__ == "__main__":
-    app = create_app()
     port = int(os.getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)
